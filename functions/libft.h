@@ -6,7 +6,7 @@
 /*   By: adumitra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/28 18:41:53 by adumitra          #+#    #+#             */
-/*   Updated: 2017/04/20 15:48:26 by adumitra         ###   ########.fr       */
+/*   Updated: 2023/12/21 20:41:26 by adumitra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,19 @@
 
 # include "./../source/fillit.h"
 
-char	**ft_strsplit(char const *s, char c);
-void	ft_bzero(void *s, size_t n);
-char	*ft_strnew(size_t size);
-void	*ft_memset(void *s, int c, size_t n);
-void	ft_putendl(char const *s);
+// creates a new matrix of words from the string "s" trimmed by the delimiter "c".
+char    **ft_strsplit(char const *s, char c);
+
+// fills with 0s the amount of "n" bytes at the address pointed by "s".
+void    ft_bzero(void *s, size_t n);
+
+// creates a new string, filled by 0s
+char    *ft_strnew(size_t size);
+
+// fills with the value "c", the specified amount of bytes "n", at the address pointed by "s"
+void    *ft_memset(void *s, int c, size_t n);
+
+// printd the string "s" at stdout.
+void    ft_putendl(char const *s);
 
 #endif

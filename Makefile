@@ -6,12 +6,14 @@
 #    By: adumitra <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/02/15 14:42:14 by adumitra          #+#    #+#              #
-#    Updated: 2017/04/22 12:42:49 by adumitra         ###   ########.fr        #
+#    Updated: 2023/12/21 22:36:49 by adumitra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+# the name of the executable
 NAME = fillit
 
+# the source .c files
 SRC = functions/cate_piese.c \
 	  functions/free_list.c \
 	  functions/free_map.c \
@@ -27,20 +29,26 @@ SRC = functions/cate_piese.c \
 	  functions/put_piece.c \
 	  source/main.c \
 	  source/ok.c \
-	  source/solver.c \
+	  source/solver.c
 
+# the compiler
 CC = gcc
 
+# the flags for the compiler
 FLAGS = -Wall -Wextra -Werror
 
+# make NAME first
 all: $(NAME)
-
+# execute the compiler with the specified flags
 $(NAME):
 	$(CC) $(FLAGS) -I. -o $(NAME) $(SRC)
 
+# remove executable
 clean:
 	/bin/rm -f $(NAME)
 
+# remove executable first
 fclean: clean
 
+# remove executable and compile it again.
 re: fclean all
